@@ -35,6 +35,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .socialMedia{
     align-content: center;
-    padding: 2%;
-    margin: 2% 35% 2% 35% ;
+    margin: 2% 15% 2% 42% ;
+}
+h3{
+    color: white;
+}
+.uk-button{
+    background-color:#304055 ;
+    color: white;
 }
