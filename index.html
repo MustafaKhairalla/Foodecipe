@@ -16,11 +16,11 @@
     <!--External JS script-->
     <script src="script/script.js"></script>
 
-    <!--Local css styles-->
-    <link href="style/style.css" type="text/css" rel="stylesheet">
-
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
+
+    <!--Local css styles-->
+    <link href="style/style.css" type="text/css" rel="stylesheet">
 
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
@@ -30,12 +30,88 @@
     <!--Header begin-->
     <header class="header" id="header">
 
+        <img src="assets/logos/logo-lime-01.png">
+        <h1>HUNGRY!!!</h1>
+        <h4>LET'S COOK TOGETHER</h4>
+
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+
     </header>
     <!--END of HEADER-->
 <!----------------------------------------------------->
     <!--Cards section begin-->
     <section class="main" id="main">
-
+        <!-- grid for row 1 -->
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default" id="recipe1">
+                    <div class="uk-card-media-top uk-cover-container">
+                        <img src="assets\Images\tempImg1.jpg" alt="tempImg1">
+                    </div>
+                    <h3 class="uk-card-title">Food 1</h3>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" id="recipe2">
+                    <div class="uk-card-media-top ">
+                        <img src="assets\Images\tempImg2.jpg" alt="tempImg2">
+                    </div>
+                    <h3 class="uk-card-title">Food 2</h3>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" id="recipe3"  >
+                    <div class="uk-card-media-top">
+                        <img src="assets\Images\tempImg3.jpg" alt="">
+                    </div>
+                    
+                    <h3 class="uk-card-title">Food 3</h3>
+                    <p>Lorem ipsum dolor sit amfffet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <!-- grid for row 2 -->
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default" id="recipe4">
+                    <div class="uk-card-media-top">
+                        <img src="assets\Images\tempImg1.jpg" alt="tempImg1">
+                    </div>
+                    
+                    <h3 class="uk-card-title">Food 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" id="recipe5">
+                    <div class="uk-card-media-top">
+                        <img src="assets\Images\tempImg2.jpg" alt="tempImg2">
+                    </div>
+                    
+                    <h3 class="uk-card-title">Food 5</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" id="recipe6">
+                    <div class="uk-card-media-top">
+                        <img src="assets\Images\tempImg3.jpg" alt="tempImg3">
+                    </div>
+                    
+                    <h3 class="uk-card-title">Food 6</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>  
     </section>
     <!--End Cards section-->
 <!----------------------------------------------------->
