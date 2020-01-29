@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -9,6 +10,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0;
     padding: 0;
     padding: 0;
+    color: burlywood;
+    font-family: 'Raleway', sans-serif;
 }
 
 .hh{
@@ -17,13 +20,36 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .header{
     width: 100%;
-    height: 25vh;
-    margin: 0 auto;
+    height: 100vh;
+    margin: 0 auto 10px auto;
     text-align: center;
-    background-image: url("assets/logos/cook.jpg");
-    background-position: center;
+    background-image: url("../assets/logos/cook.jpg");
+    background-size: cover;
     background-color:#304055;
 }
+
+.selection{
+    border-radius: 3px;
+    width: 7rem;
+    margin-top: 5rem;
+}
+
+/* .index{
+    z-index: 99;
+} */
+
+.blue{
+    background: blue;
+}
+
+.over-lay{
+    width: 100%;
+    height: 100%;
+    background-color: #304055;
+    opacity: .7;
+    position: absolute;
+}
+
 .ourPromiseInside{
     color: white;
     text-align: left;
