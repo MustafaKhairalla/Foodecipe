@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     height: 25vh;
     margin: 0 auto;
     text-align: center;
-    background-image: url("assets/logos/cook.jpg");
+    /* background-image: url("assets/logos/cook.jpg"); */
     background-position: center;
     background-color:#304055;
 }
