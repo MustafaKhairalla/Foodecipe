@@ -88,3 +88,6 @@ h3{
 #quotehead {
     color: white;
 }
+a:hover {
+    opacity: 0.5;
+}
