@@ -10,7 +10,7 @@ $(document).ready(function () {
         
             "async": true,
             "crossDomain": true,
-            "url": "https://tasty.p.rapidapi.com/recipes/list?tags=under_30_minutes&from=0&sizes=20&q="+q,
+            "url": "https://tasty.p.rapidapi.com/recipes/list?&from=0&size=6&q="+q,
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "tasty.p.rapidapi.com",
@@ -20,9 +20,21 @@ $(document).ready(function () {
     
         $.ajax(settings).done(function (response) {
             console.log(response);
-    
-    
-    
+            
+            function findDescription(){
+                
+            }
+            for (i=0; i < response.results.length; i++){
+                console.log("for loop hit")
+                var recipeTile = response.results[i].name;
+                // var componentsList = response.results[i].sections[0].components;
+                // var newItemText = componentsList.raw_text;
+                var newDescription = response.results[i].description;
+                console.log(recipeTile);
+                // console.log(componentsList);
+                // console.log(newItemText);
+                console.log(newDescription);
+            };
             // var recipeTile = response.results[0].name;
             // var displayRecipe = $("#itemDisplay").prepend("<h4>" + recipeTile);
     
