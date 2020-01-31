@@ -100,8 +100,6 @@ $(document).ready(function () {
             // };
         });
     });
-<<<<<<< HEAD
-//Quote of the Day
     var settingsQuote = {
         "async": true,
         "crossDomain": true,
@@ -109,7 +107,7 @@ $(document).ready(function () {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "andruxnet-random-famous-quotes.p.rapidapi.com",
-            "x-rapidapi-key": ".07a1619e66msh10bf90c8c184833p1c1590jsn24047b7c532a"
+            "x-rapidapi-key": "07a1619e66msh10bf90c8c184833p1c1590jsn24047b7c532a"
         }
     }
     
@@ -119,14 +117,6 @@ $(document).ready(function () {
     });
 
 
-
-
-    
-=======
-
-
-
->>>>>>> 9aca097f040db957a7a2d9e44ea9345f6e4201d0
 
 
 })

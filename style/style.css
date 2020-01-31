@@ -98,18 +98,12 @@ h3{
 /* .form input {
     display: block;
     width: 100%;
-<<<<<<< HEAD
-}
-#quotehead {
-    color: white;
-}
-a:hover {
-    opacity: 0.5;
-=======
 } */
 
 .form-set{
     width: 100%;
     display: block;
->>>>>>> 9aca097f040db957a7a2d9e44ea9345f6e4201d0
+}
+a:hover {
+    opacity: 0.5;
 }
