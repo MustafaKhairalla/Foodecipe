@@ -14,7 +14,7 @@
     </script>
 
     <!--External JS script-->
-    <script src="script/script.js"></script>
+    
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
@@ -25,6 +25,7 @@
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
+    <!-- Jquery Link --><script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Header begin-->
@@ -35,15 +36,19 @@
                 <h1>HUNGRY!!!</h1>
                 <h6>LET'S COOK TOGETHER</h6>
 
-                <select class="selection">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </div>
-        </div>
-            <!-- <div class="over-lay"></div> -->
+
+        <img src="assets/logos/logo-lime-01.png">
+        <h1>HUNGRY!!!</h1>
+        <h4>LET'S COOK TOGETHER</h4>
+
+        <select id="selector">
+            <option value="">-Select a type-</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Italian">Italian</option>
+            <option value="Chinese">Chinse</option>
+            <option value="American">American</option>
+          </select>
+
 
     </header>
     
@@ -165,5 +170,7 @@
         </form>
     </footer>
     <!--Footer End-->
+    <script src="script/script.js"></script>
 </body>
+
 </html>
