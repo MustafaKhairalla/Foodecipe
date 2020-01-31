@@ -67,7 +67,21 @@ $(document).ready(function () {
         });
     });
 
+    //var settingsQuote = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://andruxnet-random-famous-quotes.p.rapidapi.com/?count=1",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "andruxnet-random-famous-quotes.p.rapidapi.com",
+            "x-rapidapi-key": "07a1619e66msh10bf90c8c184833p1c1590jsn24047b7c532a"
+        }
+    }
     
+    $.ajax(settingsQuote).done(function (response) {
+        console.log(response);
+        $("#quote").text('"' + response[0].quote + '" - ' + response[0].author);
+    });
     
 
 })

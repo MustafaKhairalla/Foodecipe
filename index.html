@@ -141,29 +141,45 @@
     <!--End our promise section-->
 <!----------------------------------------------------->
     <!--Footer begin-->
-    <footer class="footer" id="footer">
+    <footer class="footer uk-column-1-2" id="footer">
+        <div class="uk-grid-collapse">
+
+        <div class="uk-card  uk-card-body">
+            <h3 class="uk-card-title">Contact</h3>
+            <hr>
         
-        <h3>Contact</h3>
-        <hr>
-        
-        <form class = "form">
-        <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input class="uk-input uk-form-width-large" type="text" placeholder="Name">
+                <form class = "form">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Name">
+                    </div>
+
+                     <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Email Address">
+                    </div>
+
+                     <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Phone Number">
+                    </div>
+                    <br><br>
+                    <button class="uk-button uk-button-default">Submit</button>
+                </form>
         </div>
 
-        <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-            <input class="uk-input uk-form-width-large" type="text" placeholder="Email Address">
+        <div class="uk-card uk-card-body">
+            <h2 id="quotehead" class="uk-card-title">Famous Quote of the Day!</h2>
+            <hr>
+            <h3 id="quote"></h3>
+            <hr>
+            <hr>
+            <hr>
+
         </div>
 
-        <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: receiver"></span>
-            <input class="uk-input uk-form-width-large" type="text" placeholder="Phone Number">
+
         </div>
-        <hr>
-        <button class="uk-button uk-button-default">Submit</button>
-        </form>
     </footer>
     <!--Footer End-->
     <script src="script/script.js"></script>
