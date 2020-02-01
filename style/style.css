@@ -98,6 +98,9 @@ h3{
 /* .form input {
     display: block;
     width: 100%;
+<<<<<<< HEAD
+}
+=======
 } */
 
 .form-set{
@@ -107,3 +110,4 @@ h3{
 a:hover {
     opacity: 0.5;
 }
+>>>>>>> origin
