@@ -104,3 +104,7 @@ h3{
     width: 100%;
     display: block;
 }
+
+.hide{
+    display: none;
+}

@@ -1,6 +1,6 @@
 selectorEl = $("#selector");
-// let totalArray = // some call for default view || [];
 var rowClass = document.getElementById("cardsDisplay");
+var recipeDisplayEl = document.getElementById("recipeDisplay");
 
 
 
@@ -9,7 +9,9 @@ var rowClass = document.getElementById("cardsDisplay");
 // -------------------------------- AJAX CALL FOR API -------------------------------
 $(document).ready(function () {
     selectorEl.on("change", function () {
-
+       
+        // recipeDisplayEl.setAttribute("class", "hide");
+        // rowClass.removeAttribute("class", "hide");
         var q = $(this).val();
         console.log(q);
         var settings = {
@@ -25,26 +27,28 @@ $(document).ready(function () {
         }
 
         $.ajax(settings).done(function (response) {
-
+            $("#cardsDisplay").empty();
 
             console.log(response);
-
-           
+            recipeArray = [];
+            // ------------------ parse the result and remove recipe compilations --------------------------
             for (i = 0; i < response.results.length; i++) {
-                recipeArray = [];
+                
                 responseId = response.results[i].canonical_id;
+                if (responseId.includes("recipe")) {
 
-                for (k = 0; k < 6; k++) {
-                    if (responseId.includes("recipe")) {
-                        recipeArray.push(response.results[k]);
+                    
+                       recipeArray.push(response.results[i]);
 
 
-                    }
+                    
                 }
 
             };
 
-            for (l = 0; l < recipeArray.length; l++) {
+            console.log({recipeArray});
+            // ------------------ pull info from recipe list --------------------------
+            for (l = 0; l < 6; l++) {
                 var recipeTitle = recipeArray[l].name;
                 var sections = recipeArray[l].sections
 
@@ -61,11 +65,12 @@ $(document).ready(function () {
 
                 var newCard = document.createElement("div");
                 newCard.setAttribute("class", "uk-card uk-card-default uk-border-rounded");
+                newCard.setAttribute("value", recipeTitle);
                 var div2 = document.createElement("div");
                 var imgThumb = document.createElement("img");
                 imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque");
                 imgThumb.setAttribute("src", newThumb);
-                // console.log(imgThumb);
+
                 var div3 = document.createElement("div");
                 div3.setAttribute("class", "uk-padding-small");
                 var titleSet = document.createElement("h3");
@@ -81,58 +86,68 @@ $(document).ready(function () {
                 newCard.append(div2, div3);
                 rowClass.append(newCard);
 
-
+                // ------------------ lists ingredients --------------------------
+                var componentsArray =[];
                 if (componentsList) {
                     for (var j = 0; j < componentsList.length; j++) {
                         newItemText = componentsList[j].raw_text;
                         console.log(newItemText);
+                        componentsArray.push(newItemText);
                     };
                 }
-
+                // ------------------ list instructions --------------------------
+                var instructionArray = [];
                 if (instructionList) {
+                    
                     for (var m = 0; m < instructionList.length; m++) {
                         newInstruction = instructionList[m].display_text;
                         console.log(newInstruction);
+                        instructionArray.push(newInstruction);
                     };
                 };
+                newCard.setAttribute("data-instructions", instructionArray);
+                newCard.setAttribute("data-components",componentsArray);
+
                 console.log("--------------new recipe----------------");
             };
 
 
 
-            // for (i = 0; i < recipeArray.length; i++) {
-
-                // console.log(recipeTitle);
-                // console.log(newDescription);
-                // console.log($(".uk-card-title"));
-
-                // var newCard = document.createElement("div");
-                // newCard.setAttribute("class", "uk-card uk-card-default uk-border-rounded");
-                // var div2 = document.createElement("div");
-                // var imgThumb = document.createElement("img");
-                // imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque");
-                // imgThumb.setAttribute("src", newImage);
-                // // console.log(imgThumb);
-                // var div3 = document.createElement("div");
-                // div3.setAttribute("class", "uk-padding-small");
-                // var titleSet = document.createElement("h3");
-                // titleSet.setAttribute("class", "uk-card-title", recipeTitle);
-                // titleSet = recipeTitle;
-                // var descriptSet = document.createElement("p");
-                // descriptSet = newDescription;
-
-
-
-                // div3.append(titleSet, descriptSet);
-                // div2.append(imgThumb)
-                // newCard.append(div2, div3);
-                // rowClass.append(newCard);
-                // console.log(rowClass);
-
-
-            // };
             console.log(recipeArray.length)
             console.log(recipeArray);
+            $(".uk-card").on("click", function () {
+                var cardVal = $(this).val();
+                var thisTitle = cardVal;
+               
+
+                var newTitle = $(this).add("<h3>" + thisTitle +"</h3>")
+                $(this).append(newTitle);
+                var ingredientRender = $(this).attr("data-components").split(",");
+
+                var ingredientH = $(this).add("<h3>" + "Ingredients" + "</h3>");
+                $(this).append(ingredientH);
+                var newUl = $(this).add("<ul>");
+                $(this).append(newUl);
+                for (i = 0; i < ingredientRender.length; i++ ){
+                    var newIngredient = $(this).add("<li>" +ingredientRender[i] + "</li>") ;
+                    $(this).append(newIngredient)
+                }
+
+                var instructionsRedner = $(this).attr("data-instructions").split(",");
+                $(this).append(newUl);
+                for (i = 0; i < instructionsRedner.length; i++){
+                    var newInstruction = $(this).add("<li>" +instructionsRedner[i] + "</li>")
+                    $(this).append(newInstruction);
+                }
+
+                
+                recipeDisplayEl.append(this);
+
+                rowClass.setAttribute("class", "hide");
+                recipeDisplayEl.removeAttribute("class", "hide");
+                
+
+            })
 
 
         });
@@ -163,9 +178,14 @@ $(document).ready(function () {
     })
     //---------------------------CARD CLICK------------------------------
     $(".uk-card").on("click", function () {
-        var cardID = $(this).text();
-        console.log("register card click" + cardID);
-        callAPI(cardID);
+        var cardVal = $(this).text();
+        console.log("register card click" + cardVal);
+
+        rowClass.setAttribute("class", "hide");
+        callAPI(cardVal);
+
+
+
     })
 
 });
