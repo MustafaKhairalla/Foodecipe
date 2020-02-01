@@ -1,5 +1,6 @@
 selectorEl = $("#selector");
-let totalArray = // some call for default view || [];
+// let totalArray = // some call for default view || [];
+var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-grid-match");
 
     $(document).ready(function () {
         selectorEl.on("change", function () {
@@ -32,33 +33,40 @@ let totalArray = // some call for default view || [];
                     console.log(recipeTitle);
                     console.log(newDescription);
                     console.log($(".uk-card-title"));
-                    var mainSection = document.getElementById("main");
+                    // var mainSection = document.getElementById("main");
+                    //var rowClass = document.querySelector("uk-child-width-1-3@m uk-grid-small uk-grid-match");
                     // add it to a row 
-                    var rowClass = document.createElement("div");
-                    rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
+                    // var rowClass = document.createElement("div");
+                    // rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
                     // Create Cards
                     var newCard = document.createElement("div");
-                    newCard.setAttribute("class", "uk-card uk-card-default");
+                    newCard.setAttribute("class", "uk-card uk-card-default uk-border-rounded");
                         var div2 = document.createElement("div"); 
-                        div2.setAttribute("class","uk-card uk-card-defaultuk-card-media-top uk-cover-container"); 
+                        //div2.setAttribute("class","uk-card uk-card-default uk-card-mediuk-card-media-top uk-cover-container uk-inline-clip uk-transition-togglea-top uk-cover-container"); 
                             var imgThumb = document.createElement("img");
+                            imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque");
                             imgThumb.setAttribute("src", newImage);
                             console.log(imgThumb);
-                            var titleSet = document.createElement("h3");
-                            titleSet.setAttribute("class","uk-card-title", recipeTitle);
-                            titleSet = recipeTitle;
-                            var descriptSet = document.createElement("p");
-                            descriptSet = newDescription;
-                        
-
+                            var div3 = document.createElement("div");
+                            div3.setAttribute("class", "uk-padding-small");
+                                var titleSet = document.createElement("h3");
+                                titleSet.setAttribute("class","uk-card-title", recipeTitle);
+                                titleSet = recipeTitle;
+                                var descriptSet = document.createElement("p");
+                                descriptSet = newDescription;
+                    
                         // <ul>
                             // for loop to generate n <li> nodes
                             
                     //rowClass.append(div2,titleSet,descriptSet);
-                    newCard.append(div2,imgThumb, titleSet, descriptSet, );
+
+                    div3.append(titleSet, descriptSet);
+                    div2.append(imgThumb)
+                    //div2.append(imgThumb, div3);
+                    newCard.append(div2, div3);
                     rowClass.append(newCard);
-                    mainSection.append(rowClass);
-                    console.log(mainSection);
+                    // mainSection.append(rowClass);
+                    console.log(rowClass);
                 };
                 // var recipeTile = response.results[0].name;
                 // var displayRecipe = $("#itemDisplay").prepend("<h4>" + recipeTile);
