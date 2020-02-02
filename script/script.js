@@ -70,7 +70,6 @@ $(document).ready(function () {
                 var imgThumb = document.createElement("img");
                 imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque");
                 imgThumb.setAttribute("src", newThumb);
-
                 var div3 = document.createElement("div");
                 div3.setAttribute("class", "uk-padding-small");
                 var titleSet = document.createElement("h3");
@@ -181,6 +180,12 @@ $(document).ready(function () {
 
 
 
+    })
+    //---------------------------CARD CLICK------------------------------
+    $(".uk-card").on("click", function () {
+        var cardID = $(this).text();
+        console.log("register card click" + cardID);
+        callAPI(cardID);
     })
     
 
