@@ -115,6 +115,8 @@ $(document).ready(function () {
 
             console.log(recipeArray.length)
             console.log(recipeArray);
+                //---------------------------CARD CLICK------------------------------
+
             $(".uk-card").on("click", function () {
                 var cardVal = $(this).val();
                 var thisTitle = cardVal;
@@ -176,16 +178,6 @@ $(document).ready(function () {
 
 
     })
-    //---------------------------CARD CLICK------------------------------
-    $(".uk-card").on("click", function () {
-        var cardVal = $(this).text();
-        console.log("register card click" + cardVal);
-
-        rowClass.setAttribute("class", "hide");
-        callAPI(cardVal);
-
-
-
-    })
+    
 
 });
