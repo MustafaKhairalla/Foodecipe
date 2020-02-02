@@ -109,6 +109,9 @@ $(document).ready(function () {
                 newCard.setAttribute("data-components",componentsArray);
 
                 console.log("--------------new recipe----------------");
+
+                rowClass.removeAttribute("class", "hide");
+                recipeDisplayEl.setAttribute("class", "hide");
             };
 
 
