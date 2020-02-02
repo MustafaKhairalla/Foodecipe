@@ -121,6 +121,7 @@ $(document).ready(function () {
                 //---------------------------CARD CLICK------------------------------
 
             $(".uk-card").on("click", function () {
+                $("#recipeDisplay").empty();
                 var cardVal = $(this).val();
                 var thisTitle = cardVal;
                
