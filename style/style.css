@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .contact{
-    background-color: #ACBA4A;
+    background-color: #3e536d;
     width:100%;
     /* padding: 2% 15% 2% 15% ; */
     margin: 0 auto;
@@ -146,4 +146,7 @@ li {
 
 p{
     
+}
+#quotehead{
+    color: #304055;
 }
