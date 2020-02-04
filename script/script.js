@@ -13,6 +13,7 @@ $(document).ready(function () {
     selectorEl.on("change", function () {
         // recipeDisplayEl.setAttribute("class", "hide");
         // rowClass.removeAttribute("class", "hide");
+        window.scrollTo(0, 500);
         var q = $(this).val();
         console.log(q);
         var settings = {
@@ -29,7 +30,6 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (response) {
             $("#cardsDisplay").empty();
-            window.scrollTo(0, 500);
             console.log(response);
             recipeArray = [];
             // ------------------ parse the result and remove recipe compilations --------------------------

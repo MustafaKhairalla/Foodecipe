@@ -133,8 +133,8 @@ li {
 .img{
     width: 100%;
 }
-.card{
-   
+.uk-card{
+   margin: 2%;
 }
 .pad{
     padding: 0;
