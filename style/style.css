@@ -112,6 +112,15 @@ a:hover {
     opacity: 0.5;
 }
 
+<<<<<<< HEAD
+ul{
+    padding: 2%;
+    line-height: 1.5em;
+}
+li {
+    padding: 2%;
+    line-height: 1.5em;
+=======
 
 .img{
     width: 100%;
@@ -132,4 +141,5 @@ a:hover {
 
 p{
     
+>>>>>>> 91e664cca80a487a1dc686f5afd76f3cf39a6aa9
 }
