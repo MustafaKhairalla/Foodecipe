@@ -1,29 +1,28 @@
 selectorEl = $("#selector");
-<<<<<<< HEAD
+
 // let totalArray = // some call for default view || [];
 var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-grid-match");
 
-    $(document).ready(function () {
-        selectorEl.on("change", function () {
+//     $(document).ready(function () {
+//         selectorEl.on("change", function () {
 
-            var q = $(this).val();
-            console.log(q);
-            var settings = {
+//             var q = $(this).val();
+//             console.log(q);
+//             var settings = {
 
-                "async": true,
-                "crossDomain": true,
-                "url": "https://tasty.p.rapidapi.com/recipes/list?&from=0&size=6&q=" + q,
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "tasty.p.rapidapi.com",
-                    "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
-                }
-=======
-var rowClass = document.getElementById("cardsDisplay");
-rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
-var recipeDisplayEl = document.getElementById("recipeDisplay");
-recipeDisplayEl.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match ");
-var contactFormInputs = [];
+//                 "async": true,
+//                 "crossDomain": true,
+//                 "url": "https://tasty.p.rapidapi.com/recipes/list?&from=0&size=6&q=" + q,
+//                 "method": "GET",
+//                 "headers": {
+//                     "x-rapidapi-host": "tasty.p.rapidapi.com",
+//                     "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
+//                 }
+// var rowClass = document.getElementById("cardsDisplay");
+// rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
+// var recipeDisplayEl = document.getElementById("recipeDisplay");
+// recipeDisplayEl.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match ");
+// var contactFormInputs = [];
 
 
 
@@ -44,12 +43,8 @@ $(document).ready(function () {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "tasty.p.rapidapi.com",
-<<<<<<< HEAD
                 "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
-=======
                 "x-rapidapi-key": "cc8f6d051amsh50057cf210b930cp1ef7a5jsnce9dccdb92a1"
->>>>>>> origin
->>>>>>> 91e664cca80a487a1dc686f5afd76f3cf39a6aa9
             }
         }
 
