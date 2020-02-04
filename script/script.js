@@ -1,4 +1,5 @@
 selectorEl = $("#selector");
+<<<<<<< HEAD
 // let totalArray = // some call for default view || [];
 var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-grid-match");
 
