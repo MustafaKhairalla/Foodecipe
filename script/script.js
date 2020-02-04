@@ -1,23 +1,4 @@
 selectorEl = $("#selector");
-// let totalArray = // some call for default view || [];
-var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-grid-match");
-
-    $(document).ready(function () {
-        selectorEl.on("change", function () {
-
-            var q = $(this).val();
-            console.log(q);
-            var settings = {
-
-                "async": true,
-                "crossDomain": true,
-                "url": "https://tasty.p.rapidapi.com/recipes/list?&from=0&size=6&q=" + q,
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "tasty.p.rapidapi.com",
-                    "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
-                }
-=======
 var rowClass = document.getElementById("cardsDisplay");
 rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
 var recipeDisplayEl = document.getElementById("recipeDisplay");
@@ -26,13 +7,13 @@ var contactFormInputs = [];
 
 
 
-
 // -------------------------------- AJAX CALL FOR API -------------------------------
 $(document).ready(function () {
     
     selectorEl.on("change", function () {
-        
+        // recipeDisplayEl.setAttribute("class", "hide");
         // rowClass.removeAttribute("class", "hide");
+        window.scrollTo(0, 500);
         var q = $(this).val();
         console.log(q);
         var settings = {
@@ -43,18 +24,12 @@ $(document).ready(function () {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "tasty.p.rapidapi.com",
-<<<<<<< HEAD
                 "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
-=======
-                "x-rapidapi-key": "cc8f6d051amsh50057cf210b930cp1ef7a5jsnce9dccdb92a1"
->>>>>>> origin
->>>>>>> 91e664cca80a487a1dc686f5afd76f3cf39a6aa9
             }
         }
 
         $.ajax(settings).done(function (response) {
             $("#cardsDisplay").empty();
-            window.scrollTo(0, 500);
             console.log(response);
             recipeArray = [];
             // ------------------ parse the result and remove recipe compilations --------------------------
@@ -77,7 +52,6 @@ $(document).ready(function () {
             for (l = 0; l < 6; l++) {
                 var recipeTitle = recipeArray[l].name;
                 var sections = recipeArray[l].sections
-
                 var componentsList = sections && sections[0].components;
                 var instructionList = recipeArray[l].instructions;
                 var newThumb = recipeArray[l].thumbnail_url;
@@ -115,56 +89,20 @@ $(document).ready(function () {
                 if (componentsList) {
                     for (var j = 0; j < componentsList.length; j++) {
                         newItemText = componentsList[j].raw_text;
-                        console.log(newItemText);
+                        //console.log(newItemText);
                         componentsArray.push(newItemText);
                     };
                 }
-                for (i = 0; i < response.results.length; i++) {
-                    console.log("for loop hit")
-                    var recipeTitle = response.results[i].name;
-                    var newDescription = response.results[i].description;
-                    var newImage = response.results[i].thumbnail_url;
-                    console.log(recipeTitle);
-                    console.log(newDescription);
-                    console.log($(".uk-card-title"));
-                    // var mainSection = document.getElementById("main");
-                    //var rowClass = document.querySelector("uk-child-width-1-3@m uk-grid-small uk-grid-match");
-                    // add it to a row 
-                    // var rowClass = document.createElement("div");
-                    // rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
-                    // Create Cards
-                    var newCard = document.createElement("div");
-                    newCard.setAttribute("class", "uk-card uk-card-default uk-card-body uk-border-rounded card pad");
-                        var div2 = document.createElement("div"); 
-                        div2.setAttribute("class","uk-card-media-top uk-inline-clip uk-transition-toggle"); 
-                            var imgThumb = document.createElement("img");
-                            imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque img");
-                            imgThumb.setAttribute("src", newImage);
-                            console.log(imgThumb);
-                            var div3 = document.createElement("div");
-                            div3.setAttribute("class", "uk-padding-small");
-                                var titleSet = document.createElement("h3");
-                                titleSet.setAttribute("class","uk-card-title", recipeTitle);
-                                titleSet = recipeTitle;
-                                var descriptSet = document.createElement("p");
-                                descriptSet.setAttribute("class" , "Psize")
-                                descriptSet = newDescription;
-                    
-                        // <ul>
-                            // for loop to generate n <li> nodes
-                            
-                    //rowClass.append(div2,titleSet,descriptSet);
-
-                    rowClass.append(newCard);
-                    newCard.append(div2, div3);
-                    div3.append(titleSet, descriptSet);
-                    div2.append(imgThumb)
-                    //div2.append(imgThumb, div3);
-                    //newCard.append(div2, div3);
-                    //rowClass.append(newCard);
-                    // mainSection.append(rowClass);
-                    console.log(rowClass);
-                };
+                             
+               //------------------Lists instructions -----------------------------     
+               var instructionArray = [];
+               if (instructionList) {
+                    for (var m = 0; m < instructionList.length; m++) {
+                        newInstruction = instructionList[m].display_text;
+                        //console.log(newInstruction);
+                        instructionArray.push(newInstruction);
+                    };
+                 };
                 newCard.setAttribute("data-instructions", instructionArray);
                 newCard.setAttribute("data-components",componentsArray);
 
@@ -188,9 +126,11 @@ $(document).ready(function () {
                 console.log(thisTitle);
                
 
-                var newTitle = $(this).add("<h3>" + thisTitle +"</h3>")
-                $(this).append(newTitle);
+                //var newTitle = $(this).add("<h3>" + thisTitle +"</h3>")
+               // $(this).append(newTitle);
+                //console.log(newTitle);
                 var ingredientRender = $(this).attr("data-components").split(",");
+                console.log(ingredientRender);
 
                 var ingredientH = $(this).add("<h3>" + "Ingredients" + "</h3>");
                 $(this).append(ingredientH);

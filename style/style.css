@@ -108,11 +108,20 @@ h3{
 .hide{
     display: none;
 }
+ul{
+    padding: 2%;
+    line-height: 1em;
+}
+li{
+    padding: 2%;
+    line-height: 1em;
+}
+#value{
+    font-size: 20px;
+}
 a:hover {
     opacity: 0.5;
 }
-
-<<<<<<< HEAD
 ul{
     padding: 2%;
     line-height: 1.5em;
@@ -120,17 +129,13 @@ ul{
 li {
     padding: 2%;
     line-height: 1.5em;
-=======
-
+}
 .img{
     width: 100%;
 }
-
-.card{
-    
-    
+.uk-card{
+   margin: 2%;
 }
-
 .pad{
     padding: 0;
 }
@@ -141,5 +146,4 @@ li {
 
 p{
     
->>>>>>> 91e664cca80a487a1dc686f5afd76f3cf39a6aa9
 }
