@@ -15,7 +15,7 @@ var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-gr
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "tasty.p.rapidapi.com",
-                    "x-rapidapi-key": "cc8f6d051amsh50057cf210b930cp1ef7a5jsnce9dccdb92a1"
+                    "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
                 }
             }
 
@@ -40,11 +40,11 @@ var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-gr
                     // rowClass.setAttribute("class", "uk-child-width-1-3@m uk-grid-small uk-grid-match");
                     // Create Cards
                     var newCard = document.createElement("div");
-                    newCard.setAttribute("class", "uk-card uk-card-default uk-border-rounded");
+                    newCard.setAttribute("class", "uk-card uk-card-default uk-card-body uk-border-rounded card pad");
                         var div2 = document.createElement("div"); 
-                        //div2.setAttribute("class","uk-card uk-card-default uk-card-mediuk-card-media-top uk-cover-container uk-inline-clip uk-transition-togglea-top uk-cover-container"); 
+                        div2.setAttribute("class","uk-card-media-top uk-inline-clip uk-transition-toggle"); 
                             var imgThumb = document.createElement("img");
-                            imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque");
+                            imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque img");
                             imgThumb.setAttribute("src", newImage);
                             console.log(imgThumb);
                             var div3 = document.createElement("div");
@@ -53,6 +53,7 @@ var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-gr
                                 titleSet.setAttribute("class","uk-card-title", recipeTitle);
                                 titleSet = recipeTitle;
                                 var descriptSet = document.createElement("p");
+                                descriptSet.setAttribute("class" , "Psize")
                                 descriptSet = newDescription;
                     
                         // <ul>
@@ -60,11 +61,13 @@ var rowClass = document.getElementById("uk-child-width-1-3@m uk-grid-small uk-gr
                             
                     //rowClass.append(div2,titleSet,descriptSet);
 
+                    rowClass.append(newCard);
+                    newCard.append(div2, div3);
                     div3.append(titleSet, descriptSet);
                     div2.append(imgThumb)
                     //div2.append(imgThumb, div3);
-                    newCard.append(div2, div3);
-                    rowClass.append(newCard);
+                    //newCard.append(div2, div3);
+                    //rowClass.append(newCard);
                     // mainSection.append(rowClass);
                     console.log(rowClass);
                 };
