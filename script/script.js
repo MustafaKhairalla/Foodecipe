@@ -9,7 +9,7 @@ var recipeDisplayEl = document.getElementById("recipeDisplay");
 // -------------------------------- AJAX CALL FOR API -------------------------------
 $(document).ready(function () {
     selectorEl.on("change", function () {
-       
+       window.scroll(0, 500)
         // recipeDisplayEl.setAttribute("class", "hide");
         // rowClass.removeAttribute("class", "hide");
         var q = $(this).val();
@@ -22,7 +22,7 @@ $(document).ready(function () {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "tasty.p.rapidapi.com",
-                "x-rapidapi-key": "cc8f6d051amsh50057cf210b930cp1ef7a5jsnce9dccdb92a1"
+                "x-rapidapi-key": "def62fed46msh69d1e6da6d5c453p19050djsn68ff3373da2b"
             }
         }
 
@@ -51,7 +51,6 @@ $(document).ready(function () {
             for (l = 0; l < 6; l++) {
                 var recipeTitle = recipeArray[l].name;
                 var sections = recipeArray[l].sections
-
                 var componentsList = sections && sections[0].components;
                 var instructionList = recipeArray[l].instructions;
                 var newThumb = recipeArray[l].thumbnail_url;
@@ -121,6 +120,7 @@ $(document).ready(function () {
                 //---------------------------CARD CLICK------------------------------
 
             $(".uk-card").on("click", function () {
+                $("#recipeDisplay").empty();
                 var cardVal = $(this).val();
                 var thisTitle = cardVal;
                
@@ -150,7 +150,9 @@ $(document).ready(function () {
 
                 rowClass.setAttribute("class", "hide");
                 recipeDisplayEl.removeAttribute("class", "hide");
-                
+                selectorEl.on("change",function(){
+                    return;
+                });
 
             })
 

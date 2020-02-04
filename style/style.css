@@ -108,3 +108,14 @@ h3{
 .hide{
     display: none;
 }
+ul{
+    padding: 2%;
+    line-height: 1em;
+}
+li{
+    padding: 2%;
+    line-height: 1em;
+}
+#value{
+    font-size: 20px;
+}
