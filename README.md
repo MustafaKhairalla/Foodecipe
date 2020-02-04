@@ -5,7 +5,7 @@
 <h2 align=center>Foodecipe is a hunger-driven application designed to make finding delicious recipes from around the world easier than ever!</h2>
 
 <hr>
-img
+<img src="https://github.com/MustafaKhairalla/duck-duck-code/blob/master/assets/Images/Screen%20Shot%202020-02-01%20at%201.40.23%20PM.png?raw=true">
 <hr>
 <h3 align=center>Navigating the application is simple to use:</h3>
   
@@ -18,6 +18,7 @@ img
   </ul>
   Once a choice is made, the user will be rewarded with six delicious recipes that populate on the screen.</p>
 
+<img src="https://github.com/MustafaKhairalla/duck-duck-code/blob/master/assets/Images/Screen%20Shot%202020-02-03%20at%205.38.18%20PM.png?raw=true">
 <hr>
 
 <h3 align=center>Features</h3>
