@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Foodecipe</title>
-    
+
     <!--jquery links-->
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
 
     <!--External JS script-->
-    
+
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
@@ -25,162 +24,105 @@
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
-    <!-- Jquery Link --><script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!--Header begin-->
     <header class="header" id="header">
         <div class="uk-overlay uk-position-cover">
             <div class="uk-position-large uk-position-center">
-                <img  src="assets/logos/logo-lime-01.png">
+                <img src="assets/logos/logo-lime-01.png">
                 <h1>HUNGRY!!!</h1>
                 <h6>LET'S COOK TOGETHER</h6>
 
 
-        <select id="selector">
-            <option value="">-Select a type-</option>
-            <option value="Mexican">Mexican</option>
-            <option value="Italian">Italian</option>
-            <option value="Chinese">Chinse</option>
-            <option value="American">American</option>
-          </select>
+                <select id="selector">
+                    <option value="">-Select a type-</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="American">American</option>
+                </select>
 
 
     </header>
-    
+
     <!--END of HEADER-->
-<!----------------------------------------------------->
+    <!----------------------------------------------------->
     <!--Cards section begin-->
     <section class="main" id="main">
         <!-- grid for row 1 -->
-        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" id ="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-            <!-- <div>
-                <div class="uk-card uk-card-default" id="recipe1">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="assets\Images\tempImg1.jpg" alt="tempImg1">
-                    </div>
-                    <h3 class="uk-card-title">Food 1</h3>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-border-rounded" id="recipe2">
-                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle">
-                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets\Images\tempImg2.jpg" alt="tempImg2">
-                    </div>
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid id="cardsDisplay">
 
-                    <div class="uk-padding-small">
-                        <h3 class="uk-card-title">Food 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-border-rounded" id="recipe3"  >
-                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle">
-                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets\Images\tempImg3.jpg" alt="">
-                    </div>
+        </div>
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match hide" uk-grid id="recipeDisplay"> 
 
-                    <div class="uk-padding-small"> <!--title and p area-->
-                        <h3 class="uk-card-title">Food 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div> -->
-        </div> 
-        <!-- grid for row 2 -->
-         <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" id = "uk-child-width-1-3@m uk-grid-small uk-grid-match">
-        <!-- <div>
-                <div class="uk-card uk-card-default" id="recipe4">
-                    <div class="uk-card-media-top">
-                        <img src="assets\Images\tempImg1.jpg" alt="tempImg1">
-                    </div>
-                    
-                    <div class="uk-padding-small"> <!--title and p area-->
-                        <h3 class="uk-card-title">Food 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-border-rounded" id="recipe5">
-                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle">
-                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets\Images\tempImg2.jpg" alt="tempImg2">
-                    </div>
-                    
-                    <div class="uk-padding-small"> <!--title and p area-->
-                        <h3 class="uk-card-title">Food 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default uk-border-rounded" id="recipe6">
-                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle">
-                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets\Images\tempImg3.jpg" alt="tempImg3">
-                    </div>
-                    
-                    <div class="uk-padding-small"> <!--title and p area-->
-                        <h3 class="uk-card-title">Food 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div> -->
-        </div> 
+        </div>
     </section>
     <!--End Cards section-->
-<!----------------------------------------------------->
+    <!----------------------------------------------------->
     <!--Our promise section begin-->
     <section class="about" id="about">
         <div class="ourPromise">
-            <div class = "ourPromiseInside">
+            <div class="ourPromiseInside">
                 <h3>Our Promise</h3>
-                    <p>We promise to provide you with great authentic recipes. We believe in the power of food to heal and inspire, sharing that inspiration is our greatest passion. Oh, and Bacon, we definitely believe in the power of bacon. </p>
-                    <br>
-                    <p>So please enjoy and remember, if you get food poisoning, we are not responsible. No, really we will not drive to your house to hold your hair back. That’s on you sister. </p>
-                </div>
+                <p>We promise to provide you with great authentic recipes. We believe in the power of food to heal and
+                    inspire, sharing that inspiration is our greatest passion. Oh, and Bacon, we definitely believe in
+                    the power of bacon. </p>
+                <br>
+                <p>So please enjoy and remember, if you get food poisoning, we are not responsible. No, really we will
+                    not drive to your house to hold your hair back. That’s on you sister. </p>
             </div>
         <div class = socialMedia>
             <a href="https://www.facebook.com/buzzfeedtasty/"> <img id="facebook" src = "assets/Social Media Icons/Facebook-icon_white-01.png" width="10%"> </a>
             <a href="https://www.instagram.com/buzzfeedtasty/?hl=en"> <img id="insta" src = "assets/Social Media Icons/Instagram-white-01.png" width="10%"> </a>
             <a href="https://twitter.com/tasty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"> <img id="twitter" src = "assets/Social Media Icons/Twitter-Icon-Circle_white-01.png" width="10%"> </a>
         </div>
-        <div id = emptyDiv></div>
+        <div class=socialMedia>
+            <img src="assets/Social Media Icons/Facebook-icon_white-01.png" width="10%">
+            <img src="assets/Social Media Icons/Instagram-white-01.png" width="10%">
+            <img src="assets/Social Media Icons/Twitter-Icon-Circle_white-01.png" width="10%">
+        </div>
+        <div id=emptyDiv></div>
     </section>
     <!--End our promise section-->
-<!----------------------------------------------------->
+    <!----------------------------------------------------->
     <!--Begin Contact-->
     <section class="contact" id="contact">
 
         <h3 class="uk-text-center">We love to hear from you</h3>
-        
-        
-        <form class = "form">
-        <div class="uk-inline form-set uk-margin">
-            <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input class="uk-input" type="text" placeholder="Name">
-        </div>
 
-        <div class="uk-inline form-set uk-margin">
-            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-            <input class="uk-input" type="text" placeholder="Email Address">
-        </div>
 
-        <div class="uk-inline form-set uk-margin">
-            <span class="uk-form-icon" uk-icon="icon: receiver"></span>
-            <input class="uk-input " type="text" placeholder="Phone Number">
-        </div>
+        <form class="form">
+            <div class="uk-inline form-set uk-margin">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="text" placeholder="Name">
+            </div>
 
-        <div class="uk-margin">
-            <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
-        </div>
+            <div class="uk-inline form-set uk-margin">
+                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                <input class="uk-input" type="text" placeholder="Email Address">
+            </div>
 
-        <hr>
-        <button class="uk-button uk-button-default">Submit</button>
+            <div class="uk-inline form-set uk-margin">
+                <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                <input class="uk-input " type="text" placeholder="Phone Number">
+            </div>
+
+            <div class="uk-margin">
+                <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+            </div>
+
+            <hr>
+            <button class="uk-button uk-button-default">Submit</button>
         </form>
 
     </section>
     <!--End contact us-->
-<!---------------------------------------------------->
+    <!---------------------------------------------------->
     <!--Footer begin-->
     <footer class="footer" id="footer">
         <div class="uk-card uk-card-body">
