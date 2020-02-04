@@ -55,10 +55,9 @@
     <!--Cards section begin-->
     <section class="main" id="main">
         <!-- grid for row 1 -->
-        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid id="cardsDisplay">
-
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" id="cardsDisplay" uk-grid >
         </div>
-        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match hide" uk-grid id="recipeDisplay"> 
+        <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match hide" id="recipeDisplay" uk-grid > 
 
         </div>
     </section>
@@ -76,6 +75,7 @@
                 <p>So please enjoy and remember, if you get food poisoning, we are not responsible. No, really we will
                     not drive to your house to hold your hair back. That’s on you sister. </p>
             </div>
+<<<<<<< HEAD
         </div>
         <div class=socialMedia>
             <a href= "https://www.facebook.com/buzzfeedtasty/" target="_blank">
@@ -87,6 +87,12 @@
             <a href= "https://twitter.com/tasty" target="_blank"></a>
                 <img src="assets/Social Media Icons/Twitter-Icon-Circle_white-01.png" width="10%">
             </a>
+=======
+        <div class = socialMedia>
+            <a href="https://www.facebook.com/buzzfeedtasty/"> <img id="facebook" src = "assets/Social Media Icons/Facebook-icon_white-01.png" width="10%"> </a>
+            <a href="https://www.instagram.com/buzzfeedtasty/?hl=en"> <img id="insta" src = "assets/Social Media Icons/Instagram-white-01.png" width="10%"> </a>
+            <a href="https://twitter.com/tasty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"> <img id="twitter" src = "assets/Social Media Icons/Twitter-Icon-Circle_white-01.png" width="10%"> </a>
+>>>>>>> master
         </div>
         <div id=emptyDiv></div>
     </section>
@@ -101,17 +107,17 @@
         <form class="form">
             <div class="uk-inline form-set uk-margin">
                 <span class="uk-form-icon" uk-icon="icon: user"></span>
-                <input class="uk-input" type="text" placeholder="Name">
+                <input class="uk-input" type="text" placeholder="Name" id = "contactName">
             </div>
 
             <div class="uk-inline form-set uk-margin">
                 <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                <input class="uk-input" type="text" placeholder="Email Address">
+                <input class="uk-input" type="text" placeholder="Email Address" >
             </div>
 
             <div class="uk-inline form-set uk-margin">
                 <span class="uk-form-icon" uk-icon="icon: receiver"></span>
-                <input class="uk-input " type="text" placeholder="Phone Number">
+                <input class="uk-input phone" type="text" placeholder="Phone Number">
             </div>
 
             <div class="uk-margin">
@@ -127,8 +133,15 @@
     <!---------------------------------------------------->
     <!--Footer begin-->
     <footer class="footer" id="footer">
+        <div class="uk-card uk-card-body">
+            <h2 id="quotehead" class="uk-card-title">Famous Quote of the Day!</h2>
+            <hr>
+            <h3 id="quote"></h3>
+            <hr>
+            <hr>
 
-
+        </div>
+        
     </footer>
     <!--Footer End-->
     <script src="script/script.js"></script>

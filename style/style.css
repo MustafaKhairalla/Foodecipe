@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 } */
 
 .main{
-    padding: 5rem;
+    
 }
 
 .blue{
@@ -118,4 +118,32 @@ li{
 }
 #value{
     font-size: 20px;
+}
+a:hover {
+    opacity: 0.5;
+}
+ul{
+    padding: 2%;
+    line-height: 1.5em;
+}
+li {
+    padding: 2%;
+    line-height: 1.5em;
+}
+.img{
+    width: 100%;
+}
+.card{
+   
+}
+.pad{
+    padding: 0;
+}
+
+.Psize{
+    font-size: 5px;
+}
+
+p{
+    
 }
