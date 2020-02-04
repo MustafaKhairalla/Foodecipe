@@ -65,6 +65,7 @@ $(document).ready(function () {
                 var newCard = document.createElement("div");
                 newCard.setAttribute("class", "uk-card uk-card-default uk-border-rounded");
                 newCard.setAttribute("value", recipeTitle);
+
                 var div2 = document.createElement("div");
                 var imgThumb = document.createElement("img");
                 imgThumb.setAttribute("class", "uk-transition-scale-up uk-transition-opaque");
@@ -83,6 +84,7 @@ $(document).ready(function () {
                 div3.append(titleSet, descriptSet);
                 div2.append(imgThumb)
                 newCard.append(div2, div3);
+                console.log(newCard);
                 rowClass.append(newCard);
 
                 // ------------------ lists ingredients --------------------------
@@ -90,7 +92,7 @@ $(document).ready(function () {
                 if (componentsList) {
                     for (var j = 0; j < componentsList.length; j++) {
                         newItemText = componentsList[j].raw_text;
-                        console.log(newItemText);
+                        //console.log(newItemText);
                         componentsArray.push(newItemText);
                     };
                 }
@@ -100,7 +102,7 @@ $(document).ready(function () {
                     
                     for (var m = 0; m < instructionList.length; m++) {
                         newInstruction = instructionList[m].display_text;
-                        console.log(newInstruction);
+                        //console.log(newInstruction);
                         instructionArray.push(newInstruction);
                     };
                 };
@@ -122,12 +124,15 @@ $(document).ready(function () {
             $(".uk-card").on("click", function () {
                 $("#recipeDisplay").empty();
                 var cardVal = $(this).val();
-                var thisTitle = cardVal;
+                //var thisTitle = cardVal;
+                //console.log(thisTitle);
                
 
-                var newTitle = $(this).add("<h3>" + thisTitle +"</h3>")
-                $(this).append(newTitle);
+                //var newTitle = $(this).add("<h3>" + thisTitle +"</h3>")
+               // $(this).append(newTitle);
+                //console.log(newTitle);
                 var ingredientRender = $(this).attr("data-components").split(",");
+                console.log(ingredientRender);
 
                 var ingredientH = $(this).add("<h3>" + "Ingredients" + "</h3>");
                 $(this).append(ingredientH);
