@@ -7,6 +7,7 @@
 <hr>
 <img src="https://github.com/MustafaKhairalla/duck-duck-code/blob/master/assets/Images/Screen%20Shot%202020-02-01%20at%201.40.23%20PM.png?raw=true">
 <hr>
+<a href="https://mustafakhairalla.github.io/Foodecipe/?">Link to Foodecipe</a>
 <h3 align=center>Navigating the application is simple to use:</h3>
   
   <p>Simply open Foodecipe and select a type of food from the drop-down menu. The user can select from these categories:
